@@ -1,0 +1,8 @@
+
+nav ul li:first-child a{
+    color: white;
+}
+
+nav ul li:nth-child(5) a{
+    color: yellow;
+}
