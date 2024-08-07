@@ -1,0 +1,61 @@
+nav ul li:first-child a{
+    color: white;
+}
+
+nav ul li:nth-child(5) a{
+    color: yellow;
+}
+
+.full{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    margin: 0%;
+}
+
+.box {
+    width: fit-content;
+    max-height: 60%;
+    height: fit-content;
+    background-color: rgb(139, 141, 141);
+    border: none;
+    border-radius: 8%;
+    box-shadow: 0% 1% 1% 0% black;
+    padding: 3% 5% 5% 3%;
+}
+
+.box h1 {
+    text-align: center;
+    color: white;
+}
+
+.box input{
+    min-width: 30%;
+    max-width: 90%;
+    height: 30px;
+}
+
+.box p {
+    color: white;
+    font-size: larger;
+    margin-bottom: 0%;
+}
+
+#signin {
+    margin-top: 20%;
+    margin-bottom: 5%;
+    color: black;
+    font-size: 1em;
+    font-family:sans-serif;
+    background-color: rgb(30 228 255);
+    padding: 5% 3% 5% 3% ;
+    text-align: center;
+    border: none;
+    border-radius: 10%;
+    min-width: 10%;
+    min-height: 10%;
+    
+}
+
