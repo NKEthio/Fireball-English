@@ -1,27 +1,20 @@
-let A = new Audio('./sounds/A.wav');let B = new Audio('./sounds/B.wav');let C = new Audio('./sounds/C.wav');let D = new Audio('./sounds/D.wav');let E = new Audio('./sounds/E.wav');let F = new Audio('./sounds/F.wav');
-let G = new Audio('./sounds/G.wav');let H = new Audio('./sounds/H.wav');let I = new Audio('./sounds/I.wav');let J = new Audio('./sounds/J.wav');let K = new Audio('./sounds/K.wav');let L = new Audio('./sounds/L.wav');
-let M = new Audio('./sounds/M.wav');let N = new Audio('./sounds/N.wav');let O = new Audio('./sounds/O.wav');let P = new Audio('./sounds/P.wav');let Q = new Audio('./sounds/Q.wav');let R = new Audio('./sounds/R.wav');
-let S = new Audio('./sounds/S.wav');let T = new Audio('./sounds/T.wav');let U = new Audio('./sounds/U.wav');let V = new Audio('./sounds/V.wav');let W = new Audio('./sounds/W.wav');let X = new Audio('./sounds/X.wav');
-let Y = new Audio('./sounds/Y.wav');let Z = new Audio('./sounds/Z.wav');
-let sing = new Audio("./sounds/Alphabet Song.m4a");
-let musics = ['music1.mp3','music2.mp3','music3.mp3','music4.mp3','music5.mp3',
-'music6.mp3','music7.mp3','music8.mp3','music9.mp3','music10.mp3','music11.mp3',
-'music12.mp3','music13.mp3','music14.mp3','music15.mp3'];
+const audioFiles = [
+    './sounds/A.wav', './sounds/B.wav', './sounds/C.wav', './sounds/D.wav',
+    './sounds/E.wav', './sounds/F.wav', './sounds/G.wav', './sounds/H.wav',
+    './sounds/I.wav', './sounds/J.wav', './sounds/K.wav', './sounds/L.wav',
+    './sounds/M.wav', './sounds/N.wav', './sounds/O.wav', './sounds/P.wav',
+    './sounds/Q.wav', './sounds/R.wav', './sounds/S.wav', './sounds/T.wav',
+    './sounds/U.wav', './sounds/V.wav', './sounds/W.wav', './sounds/X.wav',
+    './sounds/Y.wav', './sounds/Z.wav',
+    "./sounds/Alphabet Song.m4a",
+    './sounds/Interface.mp3', './sounds/woo.mp3',
+    "./sounds/One.m4a", "./sounds/Two.m4a", "./sounds/Three.m4a",
+    "./sounds/Four.m4a", "./sounds/Five.m4a", "./sounds/Six.m4a",
+    "./sounds/Seven.m4a", "./sounds/Eight.m4a", "./sounds/Nine.m4a",
+    "./sounds/Ten.m4a","../HelloTeacher/sounds/kids-clapping.mp3"
+];
 
-let good = new Audio('./sounds/Interface.mp3');
-let bad = new Audio('./sounds/woo.mp3');
-
-let One = new Audio("./sounds/One.m4a");
-let Two = new Audio("./sounds/Two.m4a");
-let Three = new Audio("./sounds/Three.m4a");
-let Four = new Audio("./sounds/Four.m4a");
-let Five = new Audio("./sounds/Five.m4a");
-let Six = new Audio("./sounds/Six.m4a");
-let Seven = new Audio("./sounds/Seven.m4a");
-let Eight = new Audio("./sounds/Eight.m4a");
-let Nine = new Audio("./sounds/Nine.m4a");
-let Ten = new Audio("./sounds/Ten.m4a");
-
+const Audios = audioFiles.map(file => new Audio(file));
 
 // ######################################################################################
 
@@ -36,16 +29,18 @@ let dir = '../sentence/music/';
 let buy = 0;
 let questions = [
     [
-        [A,'A'],[B,'B'],[C,'C'],[D,'D'],[E,'E'],[F,'F'],[G,'G'],[H,'H'],[I,'I'],[J,'J'],
-        [K, 'K'],[L,'L'],[M,'M'],[N,'N'],[O,'O'],[P,'P'],[Q,'Q'],[R,'R'],[S,'S'],[T,'T'],
-        [U,'U'],[V,'V'],[W,'W'],[X,'X'],[Y,'Y'],[Z,'Z']
+        [Audios[0],'A'],[Audios[1],'B'],[Audios[2],'C'],[Audios[3],'D'],[Audios[4],'E'],[Audios[5],'F'],[Audios[6],'G'],[Audios[7],'H'],[Audios[8],'I'],[Audios[9],'J'],
+        [Audios[10], 'K'],[Audios[11],'L'],[Audios[12],'M'],[Audios[13],'N'],[Audios[14],'O'],[Audios[15],'P'],[Audios[16],'Q'],[Audios[17],'R'],[Audios[18],'S'],[Audios[19],'T'],
+        [Audios[20],'U'],[Audios[21],'V'],[Audios[22],'W'],[Audios[23],'X'],[Audios[24],'Y'],[Audios[25],'Z']
     ],
     [
-    [A,'a'],[B,'b'],[C, 'c'], [D, 'd'], [E, 'e'], [F, 'f'],[G, 'g'], [H, 'h'],[I, 'i'],[J, 'j'],[K, 'k'],[L, 'l'],[M, 'm'],
-    [N, 'n'], [O, 'o'], [P, 'p'], [Q, 'q'], [R, 'r'], [S, 's'], [T, 't'],[U, 'u'],[V, 'v'],[W, 'w'],[X, 'x'],[Y, 'y'],[Z, 'z']
+        [Audios[0],'a'],[Audios[1],'b'],[Audios[2],'c'],[Audios[3],'d'],[Audios[4],'e'],[Audios[5],'f'],[Audios[6],'g'],[Audios[7],'h'],[Audios[8],'i'],[Audios[9],'j'],
+        [Audios[10], 'k'],[Audios[11],'l'],[Audios[12],'m'],[Audios[13],'n'],[Audios[14],'o'],[Audios[15],'p'],[Audios[16],'q'],[Audios[17],'r'],[Audios[18],'s'],[Audios[19],'t'],
+        [Audios[20],'u'],[Audios[21],'v'],[Audios[22],'w'],[Audios[23],'x'],[Audios[24],'y'],[Audios[25],'z']
     ],
     [
-        [One, '1'], [Two, '2'], [Three, '3'], [Four, '4'], [Five, '5'], [Six, '6'], [Seven, '7'], [Eight, '8'], [Nine, '9'], [Ten, '10']
+        [Audios[29], '1'], [Audios[30], '2'], [Audios[31], '3'], [Audios[32], '4'], 
+        [Audios[33], '5'], [Audios[34], '6'], [Audios[35], '7'], [Audios[36], '8'], [Audios[37], '9'], [Audios[38], '10']
     ]];
 
 let question = questions[Math.floor(Math.random()*questions.length)];
@@ -97,12 +92,12 @@ function ask(){
 function check(n) {
     let win = false;
     if(n == answer) {
-        good.play();
+        Audios[27].play();
         score++;
         scoreEle.innerHTML = score;
         answer = -1;
         if (score == 10 || score == 20 || score == 30 || score == 40 || score == 50 || score == 60) {
-            veryGood.play();
+            Audios[39].play();
         }
         if (score == 20 || score == 40 || score == 60 || score == 80){
             musicBuy();
@@ -110,7 +105,7 @@ function check(n) {
         win = true;
     }
     else {
-        bad.play();
+        Audios[28].play();
         win = false
     }
 
